@@ -1,0 +1,140 @@
+%\usepackage[utf8]{inputenc}
+\documentclass[a4paper,spanish]{exam}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+%\usepackage[latin1]{inputenc}
+\usepackage{fontspec}%la posta para las tildes con lualatex
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{capt-of}
+\usepackage[usenames]{color}
+%los de aca abajo capaz no los uso
+\newcommand{\class}{Matemática: Evaluación de Funciones Racionales}
+\newcommand{\term}{2° Trimestre 2015}
+\newcommand{\examnum}{Tema 3}
+\newcommand{\examprof}{Alexis Gomel}
+\newcommand{\examdate}{2/9/2015}
+\newcommand{\timelimit}{60 Minutes}%no lo uso
+\newcommand{\Ts}{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand{\Bs}{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+%el header de las hojas.
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - pagina \thepage\ de \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Profesor: \examprof}\\
+\textbf{\examnum} & \textbf{\examdate} \\
+%\textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+\textbf{Nombre: } \makebox[2in]{\hrulefill}
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\textbf{Justificar} cada respuesta. El examen esta pensado para que no haga falta usar una calculadora.
+
+\begin{table}[h]
+\centering
+%\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Ejercicio        & 1 & 2 & 3 & Nota \\ \hline
+Puntaje máximo   & 4 & 2 & 4 &   10   \\ \hline
+Puntaje obtenido &   &   &   &      \\ \hline
+\end{tabular}
+\end{table}
+
+Si se traban con algún ejercicio, pasen al siguiente y vuelvan a intentar mas tarde con el que dejaron.
+
+\begin{enumerate}
+
+%uno de inversa
+
+
+%homografica
+\item Graficar la función homografica \[ y=\frac{2x+4}{x-1} \], especificando el Dominio, la Imagen, las raíces y las asintotas. Encontrar para que valores de $x$ la función es mayor o igual a $1$.
+
+%una a graficar de las fdificiles
+
+\item Cual función corresponde al gráfico. 
+%aca va una tabla y unos graficos
+
+\begin{minipage}{0.5\textwidth}
+\centering
+%\begin{table}[!h]
+%\caption{mc1}
+\label{mc1}
+\begin{tabular}{|c|c|c|}
+\hline
+$\frac{2x^2+x}{x^2-2}$  & $\frac{2x^2(x+1)}{x^2-2}$ & $\frac{2x^2(x+1)}{x-2}$ \Ts \Bs   \\ \hline
+   &   &      \\ \hline
+\end{tabular}\\
+%\end{table}
+%\begin{figure}[h]
+\centering
+\includegraphics[width= 0.95\linewidth]{problematema1.png}
+%\end{figure}
+%graficos
+\end{minipage}
+\begin{minipage}{.5\textwidth}
+\centering
+%\begin{table}[!h]
+%\caption{mc1}
+%\label{mc1}
+\begin{tabular}{|c|c|c|}
+\hline
+$\frac{5(x^2+2)(x-1)}{x}$  & $\frac{5(x^2+2)(x-1)}{x^2}$ & $\frac{5(x+2)(x-1)}{x^2}$ \Ts \Bs   \\ \hline
+   &   &      \\ \hline
+\end{tabular}\\
+%\end{table}
+%\begin{figure}[h]
+\centering
+\includegraphics[width= 0.95\linewidth]{problematema2.png}
+%\end{figure}
+\end{minipage}
+
+
+\item  Graficar la función \[ y=\frac{x^2}{(x-1)}  \]. Indicando el Dominio, la Imagen, las raíces y las asintotas.
+
+
+ 
+\end{enumerate}
+ 
+\rule[2ex]{\textwidth}{2pt}
+ 
+"There’s as many atoms in a single molecule of your DNA as there are stars in the typical galaxy. We are, each of us, a little universe."
+$―$ Neil deGrasse Tyson, Cosmos 
+
+%\newpage
+
+%\section*{Respuestas}
+
+%1: a)3 b)49 c)-3 d)$ 1/16$ e)2 f)$ 1+0,68 $ g)$ 1,46$ h)$2.0,68$ 
+
+%2: a)27 b)2  c)2 d)6 %d)$\frac{5}{3.c^2}$
+
+%3: 1.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=0.7\textwidth]{encontrarlog2xmenos2.jpg}
+%\caption{}
+%\label{fig:logaritmo}
+%\end{figure}
+
+%3: 2.$log_2(x-2)$
+
+
+
+\end{document}

@@ -1,0 +1,60 @@
+\documentclass[a4paper,11pt,spanish,sans]{exam}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+%\usepackage[latin1]{inputenc}
+\usepackage{fontspec}%la posta para las tildes con lualatex
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{capt-of}
+\usepackage[usenames]{color}
+%los de aca abajo capaz no los uso
+\newcommand{\class}{Matemática: Guía de Números Complejos}
+\newcommand{\term}{3° Trimestre 2015}
+\newcommand{\examnum}{}
+\newcommand{\examprof}{Alexis Gomel}
+\newcommand{\examdate}{15/7/2015}
+\newcommand{\timelimit}{60 Minutes}%no lo uso
+\newcommand{\webpdf}{https://drive.google.com/file/d/0B2MOYme4kZd-Q0VHSTJRb0hINTA/view?usp=sharing}%no lo uso
+\newcommand{\Ts}{\rule{0pt}{2.6ex}}       % Top strut
+\newcommand{\Bs}{\rule[-1.2ex]{0pt}{0pt}} % Bottom strut
+
+\begin{document}
+	\begin{center}
+		\section*{Axiomas de $\mathbb{R}$}
+	\end{center}
+	
+	\begin{itemize}
+		\subsection*{Suma:}
+		
+		\item S1. Conmutatividad: $a+b=b+a$ 
+		\item S2. Asociatividad: $(a+b)+c=a+(b+c)=a+b+c$ 
+		\item S3. Existe el Neutro de Suma : $\exists \: 0/ \quad a + 0=a$ 
+		\item S4. Existe el inverso aditivo: $\forall a, \: \: \exists \: (-a) / \quad a + (-a)=0$ 
+		
+		
+		\subsection*{Producto:}
+		\item P1. Conmutatividad: $a.b=b.a$ 
+		\item P2. Asociatividad: $(a.b).c=a.(b.c)=a.b.c$ 
+		\item P3. Existe el Neutro del Producto: $\exists \: 1/ \quad a \cdot 1=a$  
+		\item P4. Existe el inverso del Producto: $\forall a\neq \: 0, \: \: \exists \:  a^{-1} / \quad a.a^{-1}=1$   \\
+		
+		\item SP. Distributiva: $a.(b+c)=a.b+a.c$
+		
+		\subsection*{Axiomas de Orden:}
+		\item O1. Tricotomia: Solo una de las siguientes posibilidades es verdadera: $a<b$, $a=b$, $a>b$
+		\item O2. Transitividad: Si $a<b$ ; $b<c$ $\Rightarrow a<c$ (idem para el $=$ y el $>$)
+		\item O3. Monotonía de Suma respecto del Orden: $a<b \Rightarrow a+c<b+c$ (idem para el $=$ y el $>$)
+		\item O4. Monotonía del Producto respecto del Orden: $a<b \Rightarrow a.c<b.c$ (idem para el $=$ y el $>$)
+		
+		\subsection*{Axioma de Completitud:}
+		\item C1. Sea $A \subset \mathbb{R} $, $A\neq \emptyset$, acotado superiormente $\Rightarrow \exists S=sup(A)$ (S = Supremo de A).
+	\end{itemize}
+	
+	
+\end{document}

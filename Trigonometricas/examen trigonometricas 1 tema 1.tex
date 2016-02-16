@@ -1,0 +1,653 @@
+\documentclass[a4paper,11pt,spanish,sans]{exam}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+%\usepackage[latin1]{inputenc}
+\usepackage{fontspec}%la posta para las tildes con lualatex
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{capt-of}
+\usepackage{gensymb}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{pst-fractal}
+%\usepackage{animate}
+\usepackage[usenames]{color}
+%para graficos
+\usepackage{pgf,tikz}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{pst-fractal}
+\usetikzlibrary{decorations.markings}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{shapes,snakes}
+\usepackage{tkz-euclide}
+\usetkzobj{all}
+
+\newcommand{\class}{Matemática: Evaluación de Trigonometria {\tiny (Ep. IV: A new hope)}}
+\newcommand{\term}{3° Trimestre 2015}
+\newcommand{\examnumuno}{Tema 4}
+\newcommand{\examnumdos}{Tema 3}
+\newcommand{\examnumvulcano}{Tema 2}
+\newcommand{\examprof}{Alexis Gomel}
+\newcommand{\examdate}{14/10/2015}
+\newcommand{\timelimit}{60 Minutes}%no lo uso
+\newcommand{\Ts}{\rule{0pt}{2.8ex}}       % Top strut
+\newcommand{\Bs}{\rule[-1.5ex]{0pt}{0pt}} % Bottom strut
+%el header de las hojas.
+\pagestyle{head}
+\firstpageheader{}{}{}
+%\runningheader{\class}{\examnumuno\ - pagina \thepage\ de \numpages}{\examdate}
+%\runningheadrule
+
+\begin{document}
+	\noindent
+	\begin{minipage}{0.92\linewidth}
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+			\textbf{\class} & \textbf{Profesor: \examprof}\\
+			\textbf{\examnumuno}  & \textbf{}   \\
+			%& Teaching Assistant & \makebox[2in]{\hrulefill}
+			\textbf{Nombre: } \makebox[2in]{\hrulefill} & \textbf{\examdate} 
+		\end{tabular*}\\
+	\end{minipage}
+	\begin{minipage}[r]{0.08\linewidth}
+		\begin{flushright}
+			\includegraphics[width=\linewidth]{bost.png}
+		\end{flushright}
+	\end{minipage}\\
+	\rule[2ex]{\textwidth}{2pt}
+
+\begin{center}
+	\textsl{\textbf{\underline{Justificar}}} cada respuesta. La evaluacion se entrega \textbf{\underline{escrita en tinta}}.\\
+	Si se traban con un ejercicio sigan con el siguiente.
+	\textbf{Preguntas:} $\bigcirc \bigcirc \bigcirc  \bigcirc $
+\end{center}
+\begin{table}[h]
+	\centering
+	%\caption{My caption}
+	\label{my-label}
+	\begin{tabular}{|l|c|c|c|}
+		\hline
+		Ejercicio        & 1 & 2 & Nota \\ \hline
+		Puntaje máximo   & 4 & 6 &  10  \\ \hline
+		Puntaje obtenido &   &   &      \\ \hline
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	
+	\item Resolver los siguientes triángulos rectángulos. (Calcular los lados, los ángulos y sus razones trigonométricas). \label{rectangulos}\\
+	
+	\begin{minipage}{0.45\linewidth}
+		
+		\begin{tikzpicture}[thick]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (3.5,0);
+		\coordinate (B) at (0,2.6);
+		\draw (O)--(A)--(B)--cycle;
+		
+		\tkzLabelSegment[below=2pt](O,A){$b$}
+		\tkzLabelSegment[left=2pt](O,B){$a$}
+		\tkzLabelSegment[above right=2pt](A,B){$h$}
+		
+		\tkzMarkRightAngle[fill=orange,size=0.6,opacity=.4](A,O,B)% square angle here
+		\tkzLabelAngle[pos = 0.35](A,O,B){$\hat{\gamma}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.8cm,%
+		opacity=.4](B,A,O)
+		\tkzLabelAngle[pos = 0.6](B,A,O){$\hat{\alpha}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.8cm,%
+		opacity=.4](O,B,A)
+		\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{\beta}$}
+		
+		\end{tikzpicture}
+		
+	\end{minipage}
+	\begin{minipage}{0.55\linewidth}
+		\begin{enumerate}
+			%\item $a=3km$,  $\quad b=4km$ .	Expresar los resultados de los ángulos en el sistema sexagesimal.
+			%\item $a=2cm$, $\quad b=1cm$
+			\item $a=30km$,  $\quad b=20km$ .	Expresar los resultados de los ángulos en el sistema sexagesimal.
+			%\item $a=5cm$, $\quad \sin(\beta)=\frac{1}{\sqrt{2}}$. Expresar los resultados de los ángulos en Radianes.
+			%\item $a=5cm$, $\quad \cos(\alpha)=\frac{\sqrt{2}}{2}$
+			\item $a=5cm$, $\quad \cos(\alpha)=\frac{\sqrt{3}}{2}$ 
+		\end{enumerate}
+	\end{minipage}
+	
+	\item Resolver los siguientes triángulos. El esquema del triangulo es solo para que sepan como los puntos $A,B$ y $C$ se corresponden con los angulos. \label{obtusos}
+
+	
+	\begin{minipage}{\linewidth}
+		\begin{enumerate}
+			%\item $\overline{AB}=8cm$,  $\overline{AC}=12cm$ y $\overline{BC}=5cm$ . Encontrar el valor de los ángulos internos y dibujar aproximadamente el triangulo.
+			\item Calcular la altura de un edificio sabiendo que a una cierta distancia la punta del edificio se encuentra a un angulo de $65\degree$ respecto del suelo como se muestra la figura, y unos $50m$ ($\overline{AB}$) mas lejos, la misma se observa a una inclinación $30\degree$ desde el suelo.
+			\item $\hat{a}=30\degree$,  $\overline{ac}=15cm$ y $\overline{ab}=10cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \overline{bc}$.
+			%\item $\hat{c}=40\degree$,  $\overline{ac}=30cm$ y $\overline{ab}=20cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{b}$.
+			%\item $\hat{a}=60\degree$, $\hat{b}=70\degree$, y $\overline{ac}=20m$. Dibujar aproximadamente el triangulo y resolverlo (hallar todos los valores restantes).
+			%\item $\overline{ab}=10cm$,  $\overline{ac}=7cm$ y $\overline{bc}=8cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{c}$.
+		\end{enumerate}
+	\end{minipage}
+	
+	\begin{minipage}{0.5\linewidth}
+		
+		\begin{tikzpicture}[thick]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (3.5,0);
+		\coordinate (B) at (-0.6,2.3);
+		\draw (O)--(A)--(B)--cycle;
+		
+		\node at (O) [below left=2pt]{$A$};
+		\node at (A) [right=2pt]{$B$};
+		\node at (B) [above left=2pt]{$C$};
+		
+		\tkzLabelSegment[below=2pt](O,A){}
+		\tkzLabelSegment[left=2pt](O,B){}
+		\tkzLabelSegment[above right=2pt](A,B){}
+		
+		\tkzMarkAngle[fill=orange,size=0.6,opacity=.4](A,O,B)% square angle here
+		\tkzLabelAngle[pos = 0.35](A,O,B){$\hat{a}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.9cm,%
+		opacity=.4](B,A,O)
+		\tkzLabelAngle[pos = 0.7](B,A,O){$\hat{b}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.7cm,%
+		opacity=.4](O,B,A)
+		\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{c}$}
+		\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+				
+		\begin{tikzpicture}[thick]
+		\coordinate (O) at (-1.3,0);
+		\coordinate (A) at (0.7,0);
+		\coordinate (B) at (2.4,0);
+		\coordinate (C) at (2.4,2.3);
+		\draw (O)--(A)--(C)--cycle;
+		\draw (O)--(B)--(C)--cycle;
+		
+		\coordinate (D) at (3.2,0);
+		\coordinate (E) at (3.2,2.3);
+		\draw[pattern=north west lines, pattern color=orange,  opacity=.6] (B)--(C)--(E)--(D)--cycle;
+		
+		\node at (O) [below left=2pt]{$A$};
+		\node at (A) [below=2pt]{$B$};
+		\node at (B) [below=2pt]{$C$};
+		\node at (C) [above =2pt]{$D$};
+		
+		\tkzLabelSegment[below=2pt](O,A){$50m$}
+		\tkzLabelSegment[center right=4pt, rotate=-90](E,D){Edificio}
+		\tkzLabelSegment[above right=2pt](A,B){}
+		
+		\tkzMarkAngle[fill=orange,size=1,opacity=.4](A,O,C)
+		\tkzLabelAngle[pos = 0.76](A,O,C){$30\degree$}
+		
+		\tkzMarkAngle[fill= orange,size=0.85,%
+		opacity=.4](A,C,B)
+		\tkzLabelAngle[pos = 0.65](A,C,B){$65\degree$}	
+		
+		\end{tikzpicture}
+	\end{minipage}
+	
+	
+	\item (bonus 1)\textbf{Extra:}
+	
+	\begin{minipage}{0.3\linewidth}
+		
+		\begin{tikzpicture}[thick]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (4,0);
+		\coordinate (B) at (3,3);
+		\coordinate (M) at (3,0);
+		\draw (O)--(A)--(B)--cycle;
+		\draw[dashed,  opacity=0.5] (M)--(B);
+		
+		\node at (O) [below left=2pt]{$A$};
+		\node at (A) [right=2pt]{$B$};
+		\node at (B) [above left=2pt]{$C$};
+		\node at (M) [below=2pt]{$M$};
+		
+		\tkzLabelSegment[below=2pt](O,A){}
+		\tkzLabelSegment[left=2pt](O,B){}
+		\tkzLabelSegment[above right=2pt](A,B){}
+		\tkzLabelSegment[left=1pt](B,M){$h$}
+		
+		\tkzMarkAngle[fill=orange,size=0.8,opacity=.4](A,O,B)% square angle here
+		\tkzLabelAngle[pos = 0.5](A,O,B){$\hat{a}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.8cm,%
+		opacity=.4](B,A,O)
+		\tkzLabelAngle[pos = 0.5](B,A,O){$\hat{b}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.7cm,%
+		opacity=.4](O,B,A)
+		\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{c}$}
+		\end{tikzpicture}
+		
+	\end{minipage}
+	\begin{minipage}{0.7\linewidth}
+		Sabiendo que para un triangulo, el área del mismo se expresa como: 
+		
+		\[ Area(ABC)=\frac{1}{2}.\overline{AB}.h \] donde $\overline{AB}$ es la base del triangulo y $h$ la altura.
+		
+		Obtener a partir de esta relación, que \[ Area(ABC)=\frac{1}{2}.\overline{AB}.\overline{AC}.\sin(\hat{a}). \]
+		
+		Observar que una relación similar también se cumple para los ángulos $\hat{b}$ y $\hat{c}$, y que partiendo de este resultado se puede deducir el teorema del seno. 
+	\end{minipage}
+	
+	\item (bonus 2)\textbf{Extra:}
+	Deducir porque en el caso del triangulo rectángulo siempre resulta que $\cos(\alpha)=\sin(\beta)$ y $\sin(\alpha)=\cos(\beta)$ 
+	
+\end{enumerate}
+
+\rule[2ex]{\textwidth}{1pt}
+
+“The avarage human has one breast and one testicle.”   -Des Machale
+
+\newpage
+
+\noindent
+	\begin{minipage}{0.92\linewidth}
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+			\textbf{\class} & \textbf{Profesor: \examprof}\\
+			\textbf{\examnumdos}  & \textbf{}   \\
+			%& Teaching Assistant & \makebox[2in]{\hrulefill}
+			\textbf{Nombre: } \makebox[2in]{\hrulefill} & \textbf{\examdate} 
+		\end{tabular*}\\
+	\end{minipage}
+	\begin{minipage}[r]{0.08\linewidth}
+		\begin{flushright}
+			\includegraphics[width=\linewidth]{bost.png}
+		\end{flushright}
+	\end{minipage}\\
+	\rule[2ex]{\textwidth}{2pt}
+	
+	\begin{center}
+		\textsl{\textbf{\underline{Justificar}}} cada respuesta. El trabajo practico se entrega \textbf{\underline{escrito en tinta}}.\\
+		Si se traban con un ejercicio sigan con el siguiente.
+		\textbf{Preguntas:} $\bigcirc \bigcirc \bigcirc  \bigcirc $
+	\end{center}
+	\begin{table}[h]
+		\centering
+		%\caption{My caption}
+		\label{my-label}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Ejercicio        & 1 & 2 & Nota \\ \hline
+			Puntaje máximo   & 4 & 6 &  10  \\ \hline
+			Puntaje obtenido &   &   &      \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Si se traban con algún ejercicio, pasen al siguiente y vuelvan a intentar mas tarde con el que dejaron.
+	
+	\begin{enumerate}
+		
+		\item Resolver los siguientes triángulos rectángulos. (Calcular los lados, los ángulos y sus razones trigonométricas). \label{rectangulos}\\
+		
+		\begin{minipage}{0.45\linewidth}
+			
+			\begin{tikzpicture}[thick]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (3.5,0);
+			\coordinate (B) at (0,2.6);
+			\draw (O)--(A)--(B)--cycle;
+			
+			\tkzLabelSegment[below=2pt](O,A){$b$}
+			\tkzLabelSegment[left=2pt](O,B){$a$}
+			\tkzLabelSegment[above right=2pt](A,B){$h$}
+			
+			\tkzMarkRightAngle[fill=orange,size=0.6,opacity=.4](A,O,B)% square angle here
+			\tkzLabelAngle[pos = 0.35](A,O,B){$\hat{\gamma}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.8cm,%
+			opacity=.4](B,A,O)
+			\tkzLabelAngle[pos = 0.6](B,A,O){$\hat{\alpha}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.8cm,%
+			opacity=.4](O,B,A)
+			\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{\beta}$}
+			
+			\end{tikzpicture}
+			
+		\end{minipage}
+		\begin{minipage}{0.55\linewidth}
+			\begin{enumerate}
+				%\item $a=3km$,  $\quad b=4km$ 		
+				\item $a=2cm$, $\quad b=1cm$. Expresar los resultados de los ángulos en el sistema sexagesimal.
+				%\item $a=5cm$, $\quad \sin(\beta)=\frac{1}{\sqrt{2}}$
+				\item $a=5m$, $\quad \cos(\alpha)=\frac{\sqrt{2}}{2}$. Expresar los resultados de los ángulos en Radianes.
+			\end{enumerate}
+		\end{minipage}
+		
+		\item Resolver los siguientes triángulos. El esquema del triangulo es solo para que sepan como los puntos $A,B$ y $C$ se corresponden con los ángulos. \label{obtusos}
+		
+		
+		\begin{minipage}{0.65\linewidth}
+			\begin{enumerate}
+				%\item $\overline{ab}=8cm$,  $\overline{ac}=12cm$ y $\overline{bc}=5cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{c}$.
+				%\item Calcular la altura de un edificio sabiendo que a una cierta distancia la punta del edificio se encuentra a un angulo de $25\degree$ respecto del suelo, y unos $40m$ mas lejos, la misma se observa a una inclinación $15\degree$.
+				\item Dos barcos parten de un puerto con una trayectoria que forma un angulo de $50\degree$ si ($\hat{a}=50\degree$). 
+				Si al cabo de media hora cada barco recorre $12km$ y $23km$ respectivamente ($\overline{AC}=12km$ y $\overline{AB}=23km$). ¿Cual es la distancia entre ellos?.
+				
+				Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{b}$.
+				%\item $\hat{a}=60\degree$, $\hat{b}=70\degree$, y $\overline{ac}=20m$. Dibujar aproximadamente el triangulo y resolverlo (hallar todos los valores restantes).
+				\item $\overline{AB}=10cm$,  $\overline{AC}=3cm$ y $\overline{BC}=4cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{c}$.
+			\end{enumerate}
+		\end{minipage}
+				\begin{minipage}{0.3\linewidth}
+			
+			\begin{tikzpicture}[thick]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (3.5,0);
+			\coordinate (B) at (1,2.3);
+			\draw (O)--(A)--(B)--cycle;
+			
+			\node at (O) [below left=2pt]{$A$};
+			\node at (A) [right=2pt]{$B$};
+			\node at (B) [above left=2pt]{$C$};
+			
+			\tkzLabelSegment[below=2pt](O,A){}
+			\tkzLabelSegment[left=2pt](O,B){}
+			\tkzLabelSegment[above right=2pt](A,B){}
+			
+			\tkzMarkAngle[fill=orange,size=0.6,opacity=.4](A,O,B)% square angle here
+			\tkzLabelAngle[pos = 0.35](A,O,B){$\hat{a}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.9cm,%
+			opacity=.4](B,A,O)
+			\tkzLabelAngle[pos = 0.7](B,A,O){$\hat{b}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.7cm,%
+			opacity=.4](O,B,A)
+			\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{c}$}
+			\end{tikzpicture}
+		\end{minipage}
+%		\begin{minipage}{0.5\linewidth}
+%			
+%			\begin{tikzpicture}[thick]
+%			\coordinate (O) at (-1.3,0);
+%			\coordinate (A) at (0.7,0);
+%			\coordinate (B) at (2.4,0);
+%			\coordinate (C) at (2.4,2.3);
+%			\draw (O)--(A)--(C)--cycle;
+%			\draw (O)--(B)--(C)--cycle;
+%			
+%			\coordinate (D) at (3.2,0);
+%			\coordinate (E) at (3.2,2.3);
+%			\draw[pattern=north west lines, pattern color=orange,  opacity=.6] (B)--(C)--(E)--(D)--cycle;
+%			
+%			\node at (O) [below left=2pt]{$A$};
+%			\node at (A) [below=2pt]{$B$};
+%			\node at (B) [below=2pt]{$C$};
+%			\node at (C) [above =2pt]{$D$};
+%			
+%			\tkzLabelSegment[below=2pt](O,A){$40m$}
+%			\tkzLabelSegment[center right=4pt, rotate=-90](E,D){Edificio}
+%			\tkzLabelSegment[above right=2pt](A,B){}
+%			
+%			\tkzMarkAngle[fill=orange,size=1,opacity=.4](A,O,C)
+%			\tkzLabelAngle[pos = 0.76](A,O,C){$15\degree$}
+%			
+%			\tkzMarkAngle[fill= orange,size=0.85,%
+%			opacity=.4](B,A,C)
+%			\tkzLabelAngle[pos = 0.59](B,A,C){$25\degree$}	
+%			
+%			\end{tikzpicture}
+%%		\end{minipage}
+%		
+		
+		\item (bonus 1)\textbf{Extra:}
+		
+		\begin{minipage}{0.3\linewidth}
+			
+			\begin{tikzpicture}[thick]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (4,0);
+			\coordinate (B) at (3,3);
+			\coordinate (M) at (3,0);
+			\draw (O)--(A)--(B)--cycle;
+			\draw[dashed,  opacity=0.5] (M)--(B);
+			
+			\node at (O) [below left=2pt]{$A$};
+			\node at (A) [right=2pt]{$B$};
+			\node at (B) [above left=2pt]{$C$};
+			\node at (M) [below=2pt]{$M$};
+			
+			\tkzLabelSegment[below=2pt](O,A){}
+			\tkzLabelSegment[left=2pt](O,B){}
+			\tkzLabelSegment[above right=2pt](A,B){}
+			\tkzLabelSegment[left=1pt](B,M){$h$}
+			
+			\tkzMarkAngle[fill=orange,size=0.8,opacity=.4](A,O,B)% square angle here
+			\tkzLabelAngle[pos = 0.5](A,O,B){$\hat{a}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.8cm,%
+			opacity=.4](B,A,O)
+			\tkzLabelAngle[pos = 0.5](B,A,O){$\hat{b}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.7cm,%
+			opacity=.4](O,B,A)
+			\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{c}$}
+			\end{tikzpicture}
+			
+		\end{minipage}
+		\begin{minipage}{0.7\linewidth}
+			Sabiendo que para un triangulo, el área del mismo se expresa como: 
+			
+			\[ Area(ABC)=\frac{1}{2}.\overline{AB}.h \] donde $\overline{AB}$ es la base del triangulo y $h$ la altura.
+			
+			Obtener a partir de esta relación, que \[ Area(ABC)=\frac{1}{2}.\overline{AB}.\overline{AC}.\sin(\hat{a}). \]
+			
+			Observar que una relación similar también se cumple para los ángulos $\hat{b}$ y $\hat{c}$, y que partiendo de este resultado se puede deducir el teorema del seno. 
+		\end{minipage}
+		
+		\item (bonus 2)\textbf{Extra:}
+		Deducir porque en el caso del triangulo rectángulo siempre resulta que $\cos(\alpha)=\sin(\beta)$ y $\sin(\alpha)=\cos(\beta)$ 
+		
+	\end{enumerate}
+	
+	\rule[2ex]{\textwidth}{1pt}
+	
+	“The avarage human has one breast and one testicle.”   -Des Machale
+	
+	
+\newpage
+
+\noindent
+	\begin{minipage}{0.92\linewidth}
+		\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+			\textbf{\class} & \textbf{Profesor: \examprof}\\
+			\textbf{\examnumvulcano}  & \textbf{}   \\
+			%& Teaching Assistant & \makebox[2in]{\hrulefill}
+			\textbf{Nombre: } \makebox[2in]{\hrulefill} & \textbf{\examdate} 
+		\end{tabular*}\\
+	\end{minipage}
+	\begin{minipage}[r]{0.08\linewidth}
+		\begin{flushright}
+			\includegraphics[width=\linewidth]{bost.png}
+		\end{flushright}
+	\end{minipage}\\
+	\rule[2ex]{\textwidth}{2pt}
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	\begin{center}
+		\textsl{\textbf{\underline{Justificar}}} cada respuesta. El trabajo practico se entrega \textbf{\underline{escrito en tinta}}.\\
+		Si se traban con un ejercicio sigan con el siguiente.
+		\textbf{Preguntas:} $\bigcirc \bigcirc \bigcirc  \bigcirc $
+	\end{center}
+	
+	\begin{table}[h]
+		\centering
+		%\caption{My caption}
+		\label{my-label}
+		\begin{tabular}{|l|c|c|c|}
+			\hline
+			Ejercicio        & 1 & 2 & Nota \\ \hline
+			Puntaje máximo   & 4 & 6 &  10  \\ \hline
+			Puntaje obtenido &   &   &      \\ \hline
+		\end{tabular}
+	\end{table}
+	
+	Si se traban con algún ejercicio, pasen al siguiente y vuelvan a intentar mas tarde con el que dejaron.
+	
+	\begin{enumerate}
+		
+		\item Resolver los siguientes triángulos rectángulos. (Calcular los lados, los ángulos y sus razones trigonométricas). \label{rectangulos}\\
+		
+		\begin{minipage}{0.45\linewidth}
+			
+			\begin{tikzpicture}[thick]
+			\coordinate (O) at (0,0);
+			\coordinate (A) at (3.5,0);
+			\coordinate (B) at (0,3);
+			\draw (O)--(A)--(B)--cycle;
+			
+			\tkzLabelSegment[below=2pt](O,A){$b$}
+			\tkzLabelSegment[left=2pt](O,B){$a$}
+			\tkzLabelSegment[above right=2pt](A,B){$h$}
+			
+			\tkzMarkRightAngle[fill=orange,size=0.6,opacity=.4](A,O,B)% square angle here
+			\tkzLabelAngle[pos = 0.35](A,O,B){$\hat{\gamma}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.8cm,%
+			opacity=.4](B,A,O)
+			\tkzLabelAngle[pos = 0.6](B,A,O){$\hat{\alpha}$}
+			
+			\tkzMarkAngle[fill= orange,size=0.8cm,%
+			opacity=.4](O,B,A)
+			\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{\beta}$}
+			
+			\end{tikzpicture}
+			
+		\end{minipage}
+		\begin{minipage}{0.55\linewidth}
+			\begin{enumerate}
+				\item $a=3km$,  $\quad b=4km$ 		
+				%\item $a=2cm$, $\quad b=1cm$
+				\item $a=5cm$, $\quad \sin(\beta)=0.5$
+			%\item $a=5cm$, $\quad \cos(\alpha)=\frac{\sqrt{2}}{2}$ 
+		\end{enumerate}
+	\end{minipage}
+	
+	\item Resolver los siguientes triángulos. El esquema del triangulo es solo para que sepan como los puntos $A,B$ y $C$ se corresponden con los angulos. \label{obtusos}
+	%aca va una tabla y unos graficos
+	
+	\begin{minipage}{0.35\linewidth}
+		
+		\begin{tikzpicture}[thick]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (3.5,0);
+		\coordinate (B) at (-0.6,3);
+		\draw (O)--(A)--(B)--cycle;
+		
+		\node at (O) [below left=2pt]{$A$};
+		\node at (A) [right=2pt]{$B$};
+		\node at (B) [above left=2pt]{$C$};
+		
+		\tkzLabelSegment[below=2pt](O,A){}
+		\tkzLabelSegment[left=2pt](O,B){}
+		\tkzLabelSegment[above right=2pt](A,B){}
+		
+		\tkzMarkAngle[fill=orange,size=0.6,opacity=.4](A,O,B)% square angle here
+		\tkzLabelAngle[pos = 0.35](A,O,B){$\hat{a}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.9cm,%
+		opacity=.4](B,A,O)
+		\tkzLabelAngle[pos = 0.7](B,A,O){$\hat{b}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.7cm,%
+		opacity=.4](O,B,A)
+		\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{c}$}
+		\end{tikzpicture}
+		
+	\end{minipage}
+	\begin{minipage}{0.65\linewidth}
+		\begin{enumerate}
+			\item $\overline{AB}=8cm$,  $\overline{AC}=12cm$ y $\overline{BC}=8cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{c}$.
+			\item $\hat{c}=40\degree$,  $\overline{AC}=30cm$ y $\overline{AB}=20cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{b}$.
+			%\item $\hat{a}=60\degree$, $\hat{b}=70\degree$, y $\overline{ac}=20m$. Dibujar aproximadamente el triangulo y resolverlo (hallar todos los valores restantes).
+			%\item $\overline{ab}=10cm$,  $\overline{ac}=7cm$ y $\overline{bc}=8cm$ . Dibujar aproximadamente el triangulo y encontrar el valor de $x= \hat{c}$.
+		\end{enumerate}
+	\end{minipage}
+	
+	\item (bonus 1)\textbf{Extra:}
+	
+	\begin{minipage}{0.35\linewidth}
+		
+		\begin{tikzpicture}[thick]
+		\coordinate (O) at (0,0);
+		\coordinate (A) at (4,0);
+		\coordinate (B) at (3,3);
+		\coordinate (M) at (3,0);
+		\draw (O)--(A)--(B)--cycle;
+		\draw[dashed,  opacity=0.5] (M)--(B);
+		
+		\node at (O) [below left=2pt]{$A$};
+		\node at (A) [right=2pt]{$B$};
+		\node at (B) [above left=2pt]{$C$};
+		\node at (M) [below=2pt]{$M$};
+		
+		\tkzLabelSegment[below=2pt](O,A){}
+		\tkzLabelSegment[left=2pt](O,B){}
+		\tkzLabelSegment[above right=2pt](A,B){}
+		\tkzLabelSegment[left=1pt](B,M){$h$}
+		
+		\tkzMarkAngle[fill=orange,size=0.8,opacity=.4](A,O,B)% square angle here
+		\tkzLabelAngle[pos = 0.5](A,O,B){$\hat{a}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.8cm,%
+		opacity=.4](B,A,O)
+		\tkzLabelAngle[pos = 0.5](B,A,O){$\hat{b}$}
+		
+		\tkzMarkAngle[fill= orange,size=0.7cm,%
+		opacity=.4](O,B,A)
+		\tkzLabelAngle[pos = 0.5](O,B,A){$\hat{c}$}
+		\end{tikzpicture}
+		
+	\end{minipage}
+	\begin{minipage}{0.65\linewidth}
+		Sabiendo que para un triangulo, el área del mismo se expresa como: 
+		
+		\[ Area(ABC)=\frac{1}{2}.\overline{AB}.h \] donde $\overline{AB}$ es la base del triangulo y $h$ la altura.
+		
+		Obtener a partir de esta relación, que \[ Area(ABC)=\frac{1}{2}.\overline{AB}.\overline{AC}.\sin(\hat{a}). \]
+		
+		Observar que una relación similar también se cumple para los ángulos $\hat{b}$ y $\hat{c}$, y que partiendo de este resultado se puede deducir el teorema del seno. 
+	\end{minipage}
+	
+	\item (bonus 2)\textbf{Extra:}
+	Deducir porque en el caso del triangulo rectángulo siempre resulta que $\cos(\alpha)=\sin(\beta)$ y $\sin(\alpha)=\cos(\beta)$ 
+	
+\end{enumerate}
+
+\rule[2ex]{\textwidth}{2pt}
+
+“The avarage human has one breast and one testicle.”   -Des Machale
+
+%\section*{Respuestas}
+
+%1: a)3 b)49 c)-3 d)$ 1/16$ e)2 f)$ 1+0,68 $ g)$ 1,46$ h)$2.0,68$ 
+
+%2: a)27 b)2  c)2 d)6 %d)$\frac{5}{3.c^2}$
+
+%3: 1.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=0.7\textwidth]{encontrarlog2xmenos2.jpg}
+%\caption{}
+%\label{fig:logaritmo}
+%\end{figure}
+
+%3: 2.$log_2(x-2)$
+
+
+
+\end{document}

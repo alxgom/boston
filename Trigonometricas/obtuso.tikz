@@ -1,0 +1,33 @@
+\begin{tikzpicture}[new property=]
+	\path [use as bounding box] (-2,0) rectangle (2,3);
+	\begin{pgfonlayer}{nodelayer}
+		\node [style=none] (0) at (2, -0) {};
+		\node [style=none] (1) at (-2, 3) {};
+		\node [style=none, new atom, new atom, new property=] (2) at (-1, -0) {};
+		\node [style=yn] (3) at (-1.75, 2.5) {};
+		\node [style=yn] (4) at (-1.5, 2.75) {};
+		\node [style=yn] (5) at (-1.5, 2.75) {};
+		\node [style=yn] (6) at (-1.75, 2.5) {};
+		\node [style=yn] (7) at (-1.75, 2.5) {};
+		\node [style=yn] (8) at (-3.75, 2.5) {};
+		\node [style=yn] (9) at (-3.75, 0.75) {};
+		\node [style=yn] (10) at (-3.75, -1) {};
+		\node [style=yn] (11) at (-3.25, 1.25) {};
+		\node [style=yn] (12) at (-2.75, 3.5) {};
+		\node [style=yn] (13) at (-2.75, 3.5) {};
+		\node [style=none] (14) at (-1.25, 0.75) {};
+		\node [style=none] (15) at (-0.25, -0) {};
+		\node [style=none] (16) at (1, -0) {};
+		\node [style=none] (17) at (1.25, 0.5) {};
+		\node [style=none] (18) at (-1, 2.25) {};
+		\node [style=none] (19) at (-1.75, 2.25) {};
+	\end{pgfonlayer}
+	\begin{pgfonlayer}{edgelayer}
+		\draw (2.center) to (0.center);
+		\draw (1.center) to (2.center);
+		\draw [style=gdfz] (1.center) to (0.center);
+		\draw [style=gdfz, bend right=90, looseness=0.75] (17.center) to (16.center);
+		\draw [style=gdfz, bend right=60, looseness=1.00] (15.center) to (14.center);
+		\draw [style=gdfz, bend left=60, looseness=1.00] (18.center) to (19.center);
+	\end{pgfonlayer}
+\end{tikzpicture}

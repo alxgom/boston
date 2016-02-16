@@ -1,0 +1,30 @@
+\documentclass[11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage{pgf,tikz}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
+\begin{document}
+\definecolor{qqyqqq}{rgb}{0.16470588235294117,0.16470588235294117,0.16470588235294117}
+\definecolor{cqcqcq}{rgb}{0.7529411764705882,0.7529411764705882,0.7529411764705882}
+\begin{frame}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=0.41716328963051247cm,y=0.5385996409335728cm]
+\draw [color=cqcqcq,, xstep=0.41716328963051247cm,ystep=0.5385996409335728cm] (-4.3,-4.84) grid (12.48,6.3);
+\draw[->,color=black] (-4.3,0.) -- (12.48,0.);
+\foreach \x in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.,7.,8.,9.,10.,11.,12.}
+\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
+\draw[->,color=black] (0.,-4.84) -- (0.,6.3);
+\foreach \y in {-4.,-3.,-2.,-1.,1.,2.,3.,4.,5.,6.}
+\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
+\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
+\clip(-4.3,-4.84) rectangle (12.48,6.3);
+\onslide<8->{
+  \draw[line width=1.2pt,color=qqyqqq,smooth,samples=100,domain=-4.3:12.48] plot(\x,{((\x)+1)/((\x)^(2.0)+4)});
+}
+\begin{scriptsize}
+\onslide<8->{
+  \draw[color=qqyqqq] (-4.14,-0.28) node {$f$};
+}
+\end{scriptsize}
+\end{tikzpicture}
+\end{frame}
+\end{document}

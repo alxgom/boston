@@ -1,0 +1,185 @@
+\documentclass[a4paper,11pt,spanish,sans]{exam}
+\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+\usepackage{multicol}
+%\usepackage[latin1]{inputenc}
+\usepackage{fontspec}%la posta para las tildes con lualatex
+\usepackage[margin=0.5in]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{multicol}
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{epstopdf}
+\usepackage{capt-of}
+\usepackage[usenames]{color}
+%los de aca abajo capaz no los uso
+\newcommand{\class}{Matemática: Evaluación de  Logaritmos}
+\newcommand{\term}{2° Trimestre 2015}
+\newcommand{\examnum}{Tema 2}
+\newcommand{\examprof}{Alexis Gomel}
+\newcommand{\examdate}{16/7/2015}
+\newcommand{\timelimit}{60 Minutes}%no lo uso
+
+%el header de las hojas.
+\pagestyle{head}
+\firstpageheader{}{}{}
+\runningheader{\class}{\examnum\ - Page \thepage\ of \numpages}{\examdate}
+\runningheadrule
+
+
+\begin{document}
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Profesor: \examprof}\\
+\textbf{\examnum} & \textbf{\examdate} \\
+%\textbf{Time Limit: \timelimit} & Teaching Assistant & \makebox[2in]{\hrulefill}
+\textbf{Nombre: } \makebox[2in]{\hrulefill}
+\end{tabular*}\\
+\rule[2ex]{\textwidth}{2pt}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Justificar cada respuesta. El examen esta pensado para que no haga falta usar una calculadora.
+
+\begin{table}[h]
+\centering
+%\caption{My caption}
+\label{my-label}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+Ejercicio        & 1 & 2 & 3 & Nota \\ \hline
+Puntaje máximo   & 4 & 4 & 2 &   10   \\ \hline
+Puntaje obtenido &   &   &   &      \\ \hline
+\end{tabular}
+\end{table}
+
+Si se traban con algún ejercicio, pasen al siguiente y vuelvan a intentar mas tarde con el que dejaron.
+
+
+\begin{enumerate}
+\item (4 Puntos)\textbf{Resolver:} Cada ítem vale medio $0,5$ puntos.
+\begin{multicols}{2}
+\begin{enumerate}
+\item $log(1000)-log_{\frac{1}{3}}(1)$
+\item $9^{log_3(7)}$
+\item $log_3(\frac{1}{27})$
+\item $e^{2.ln(2) - 3.ln(4) - 3^{6}.ln(1)}$
+
+\columnbreak
+
+\item $log_{a^n}(a^m)$
+
+Sabiendo que $log_5(3)\simeq 0,68$, calcular:
+
+\item $log_5(15)$
+\item $log_3(5)$
+\item $log_5(9)$
+
+
+\end{enumerate}
+\end{multicols}
+
+
+
+\item (4 Puntos)\textbf{Encontrar, si es posible, el valor de x :}
+Cada ítem vale 1 puntos.
+\begin{enumerate}
+\item $log(x)=3.log(3)$
+\item $log_8(2.x-4)=1$
+\item $3^{x+2}-5.3^x=36$
+\item $4.log_4(x)-6.log_{16}(x)=16 $
+%\item $log(x)=log(\frac{5.c}{3})-3.log(c)$
+\end{enumerate}
+
+\item (2 Puntos)\textbf{Gráficos:}
+Cada ítem vale 1 punto.
+\begin{enumerate}
+%\begin{multicols}{2}
+
+\item  Graficar $y=log_{2}(x-2)$. (Basta con completar la tabla, y unir los puntos.)
+
+Indicar en que  valor de $x$ esta la asíntota vertical. 
+
+%\columnbreak
+
+%\begin{table}[h]
+%\centering
+%\caption{Tabla para Graficar}
+%%\label{my-label}
+%\begin{tabular}{|c|c|}
+%\hline
+%$x$ & $y$ \\ \hline
+%3 &     \\ \hline
+%4  &    \\ \hline
+%6  &    \\ \hline
+%10    &    \\ \hline
+%$\frac{5}{2} $ &    \\ \hline
+%$\frac{9}{4} $ &    \\ \hline
+%$\frac{17}{8} $ &    \\ \hline
+%\end{tabular}
+%\end{table}
+
+\begin{table}[h]
+\centering
+%\caption{Tabla para Graficar}
+\label{my-label}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline
+$x$ & 3 & 4 & 6 & 10 & $5/2$ & $9/4 $  \\ \hline
+$y$ & & & & & &  \\ \hline
+\end{tabular}
+\end{table}
+
+%\end{multicols}
+
+\item  Encontrar $a$ y $b$ ,  a partir del gráfico de $y=log_a(x-b)$.
+
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=0.7\textwidth]{encontrarlog3xmas2.jpg}
+\caption{Encontrar $a$ y $b$,  a partir del gráfico de $y=log_a(x-b)$.
+Los puntos marcados con asterisco, son los valores de $y$ cuando $x$ vale $-2,000001  ;  -1;  0;  1;  2;  3 ... $}
+\label{fig:logaritmo}
+\end{figure}
+
+Pista: Analizar que pasa en $(-1,0)$ y en $(1,1)$. Que tienen que cumplir $a$ y $b$ para que sea posible que la función tome estos valores?
+
+\end{enumerate}
+
+
+ \item (bonus)\textbf{Extra:}
+ Si ya terminaste los demás, este ejercicio sirve como un bonus para darte un empujón si estas cerca de aprobar, o para redondear la nota para arriba.\\
+ 
+ Sabiendo que, por definición, $x=a^{log_a(x)}$; y $x=c^{log_c(x)}$. Demostrar que $log_a(x)=\frac{log_c(x)}{log_c(a)}$.
+ 
+ \end{enumerate}
+ 
+ \rule[2ex]{\textwidth}{2pt}
+ 
+"There’s as many atoms in a single molecule of your DNA as there are stars in the typical galaxy. We are, each of us, a little universe."
+$―$ Neil deGrasse Tyson, Cosmos 
+
+%\newpage
+
+%\section*{Respuestas}
+
+%1: a)3 b)49 c)-3 d)$ 1/16$ e)2 f)$ 1+0,68 $ g)$ 1,46$ h)$2.0,68$ 
+
+%2: a)27 b)2  c)2 d)6 %d)$\frac{5}{3.c^2}$
+
+%3: 1.
+%\begin{figure}[h!]
+%\centering
+%\includegraphics[width=0.7\textwidth]{encontrarlog2xmenos2.jpg}
+%\caption{}
+%\label{fig:logaritmo}
+%\end{figure}
+
+%3: 2.$log_2(x-2)$
+
+
+
+\end{document}
